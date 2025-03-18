@@ -1,3 +1,5 @@
+# Below are the variables with each animals name using the raw string type allowing us to create ascii character images without the need to wprry about quotes, escape character, etc
+
 camel = r"""
 Switching on the camera in the camel habitat...
  ___.-''''-.
@@ -119,18 +121,14 @@ Switching on the camera in the rabbit habitat...
 (" ~----( ~   Y.  )
 It looks like we will soon have more rabbits!"""
 
-
+# Function that looks at what habitat the user requests by using the index of each animal camel = [0], lion = [1], deer = [2], goose = [3], bat = [4], rabbit = [5]
 def main(habitat):
     animals = [camel, lion, deer, goose, bat, rabbit]
     return animals[habitat]
 
-       
-
-
+# While loop to evaluate if the user is going to look at another habitat or exit the program
 while True:
-    habitat_input = input(
-        "Please enter the number of the habitat you would like to view: "
-    )
+    habitat_input = input("Please enter the number of the habitat you would like to view: ")
     if habitat_input == "exit":
         print("See you later!")
         break
